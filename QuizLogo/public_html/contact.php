@@ -33,12 +33,45 @@
                     <label for="lname">Nom</label>
                     <input type="text" id="lname" name="lastname">
 
+                    <input type="radio" name="gender" value="male" checked> Male
+                    <input type="radio" name="gender" value="female"> Female<br>
+                    
                     <label for="country">Pays</label>
                     <select id="country" name="country">
-                        <option value="australia">Australia</option>
+                        <option value="Albanie">Albanie</option>
+                        <option value="Allemagne">Allemagne</option>
+                        <option value="Australie">Australie</option>
+                        <option value="Autriche">Autriche</option>
+                        <option value="Belgique">Belgique</option>
+                        <option value="Bosnie">Bosnie</option>
+                        <option value="Bulgarie">Bulgarie</option>    
                         <option value="canada">Canada</option>
-                        <option value="usa">USA</option>
+                        <option value="Croatie">Croatie</option>
+                        <option value="EUA">Danemark</option>
+                        <option value="Espagne">Espagne</option>
+                        <option value="Estonie">Estonie</option>
+                        <option value="EUA">EUA</option>
+                        <option value="France">France</option>
+                        <option value="Grèce">Grèce</option>
+                        <option value="Hongrie">Hongrie</option>
+                        <option value="Island">Island</option>
+                        <option value="Italie">Italie</option>
+                        <option value="Lettonie">Lettonie</option>
+                        <option value="Lituanie">Lituanie</option>
+                        <option value="Macédonie">Macédonie</option>
+                        <option value="Monténégro">Monténégro</option>
+                        <option value="Norvège">Norvège</option>
+                        <option value="Pays-Bas">Pays-Bas</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Royaume-Uni">Royaume-Uni</option>
+                        <option value="Suisse">Suisse</option>
+                        <option value="Turquie">Turquie</option>
                     </select>
+
+                    <label for="mail">Mail</label>
+                    <input type="text" id="mail" name="mail">
+                    
+                    <textarea>Écrivez votre message ici..</textarea>
 
                     <input type="submit" value="Submit">
                 </form>
