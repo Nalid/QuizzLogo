@@ -27,17 +27,17 @@
                 </nav>
             </header>
             <section id="contact-form">
-                <form action="action_page.php">
-                    <label for="fname">Prénom</label>
-                    <input type="text" id="fname" name="firstname">
+                <form action="">
+                    <label for="fname"><b>Prénom</b></label>
+                    <input type="text" id="fname" name="firstname" placeholder="Entrez votre nom">
 
-                    <label for="lname">Nom</label>
-                    <input type="text" id="lname" name="lastname">
+                    <label for="lname"><b>Nom</b></label>
+                    <input type="text" id="lname" name="lastname" placeholder="Entrez votre prénom">
 
                     <input type="radio" name="gender" value="male" checked> Male
                     <input type="radio" name="gender" value="female"> Female<br>
                     
-                    <label for="country">Pays</label>
+                    <label for="country"><b>Pays</b></label>
                     <select id="country" name="country">
                         <option value="Albanie">Albanie</option>
                         <option value="Allemagne">Allemagne</option>
@@ -69,10 +69,13 @@
                         <option value="Turquie">Turquie</option>
                     </select>
 
-                    <label for="mail">Mail</label>
-                    <input type="text" id="mail" name="mail">
+                    <label for="mail"><b>Mail</b></label>
+                    <input type="text" id="mail" name="mail" placeholder="Entrez votre adresse mail">
                     
-                    <textarea>Écrivez votre message ici..</textarea>
+                    <label for="mail"><b>Image</b></label><br>
+                    <input type="file" name="addedFile"><br>
+                    
+                    <textarea placeholder="Écrivez votre message ici.."></textarea>
 
                     <input type="submit" value="Submit">
                 </form>

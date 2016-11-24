@@ -27,7 +27,23 @@
                 </nav>
             </header>
             <section>
-                
+                <form action="action_page.php">
+                    <div class="container">
+                        <label><b>Username</b></label>
+                        <input type="text" placeholder="Entrez votre pseudo" name="uname" required>
+
+                        <label><b>Password</b></label>
+                        <input type="password" placeholder="Entrez votre mote de passe" name="psw" required>
+
+                        <button type="submit">Login</button>
+                        <input type="checkbox" checked="checked"> Remember me
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                </form>
             </section>
             <footer>
 
