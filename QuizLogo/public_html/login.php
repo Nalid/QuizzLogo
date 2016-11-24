@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Quiz</title>
+        <title>Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/style1.css">
@@ -22,17 +22,12 @@
                         <li><a href="accueil.php">Accueil</a></li>
                         <li><a href="quiz.php">Quiz</a></li>
                         <li><a href="contact.php">Contact</a></li>
-                        <li style="float:right"><a href="login.php">Login</a></li>
+                        <li style="float:right" class="active"><a href="login.php">Login</a></li>
                     </ul>
                 </nav>
             </header>
             <section>
-                <article class="floating-box">1</article>
-                <article class="floating-box">2</article>
-                <article class="floating-box">3</article>
-                <article class="floating-box">4</article>
-                <article class="floating-box">5</article>
-                <article class="floating-box">6</article>
+                
             </section>
             <footer>
 
