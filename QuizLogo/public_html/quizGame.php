@@ -5,6 +5,7 @@
  * Description  :
  * Date         : 10.11.2016
  */
+require_once 'request.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,7 +28,11 @@
                 </nav>
             </header>
             <section>
-                <article class="floating-box">1</article>
+                <article class="floating-box">
+                    <?php
+                    $element = arrayElement("Mode");
+                    ?>
+                </article>
                 <article class="floating-box">2</article>
                 <article class="floating-box">3</article>
                 <article class="floating-box">4</article>

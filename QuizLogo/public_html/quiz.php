@@ -5,6 +5,8 @@
  * Description  :
  * Date         : 10.11.2016
  */
+
+require_once 'dbconnection.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,7 +35,24 @@
                     <button class="button">Les marques de MODE</button>
                     <button class="button">Les marques de VOITURES</button>
                     <button class="button">Les marques de NOURRITURE</button>
-                </div> 
+                </div>
+                
+                <?php
+                    $takeAll = getAll();
+                ?>
+                <table>
+                    <?php
+                        foreach ($reponse as $takeAll)
+                        {
+                            ?>
+                    <tr>
+                        <td><?php echo $reponse["NomMarques"]?></td>
+                    </tr>
+                    <?php
+                    }
+                    ?>
+                </table>
+                
             </section>
             <footer>
 
