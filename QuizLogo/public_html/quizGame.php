@@ -6,6 +6,33 @@
  * Date         : 10.11.2016
  */
 require_once 'request.php';
+
+$type;
+
+if(isset($_GET["Sport"]))
+{
+    $element = getTypeQuiz("Sport");
+    $type = "Sport";
+} 
+else if (isset($_GET["Mode"]))
+{
+    $element = getTypeQuiz("Mode");
+    $type = "Mode";
+}
+else if (isset($_GET["Voiture"]))
+{
+    $element = getTypeQuiz("Voitures");
+    $type = "Voiture";
+}
+else if(isset($_GET["Nourriture"]))
+{
+    $element = getTypeQuiz("Nourriture");
+    $type = "Nourriture";
+}
+else if (isset($_GET["Tout"]))
+{
+    $element = getAll();
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,18 +55,7 @@ require_once 'request.php';
                 </nav>
             </header>
             <section>
-                <article class="floating-box">
-                    <?php
-                    //En construction
-                    $element = getTypeQuiz("Mode");
-                    for ($i = 0; $i < 6-1; $i++)
-                    {
-                        $random = rand(0, count($element) - 1);
-                        echo $element[$random]["NomMarques"];
-                        echo " / ";
-                    }
-                    ?>
-                </article>
+                <article class="floating-box"></article>
                 <article class="floating-box">2</article>
                 <article class="floating-box">3</article>
                 <article class="floating-box">4</article>

@@ -1,6 +1,7 @@
 <?php
 require_once 'dbconnection.php';
 
+//Récuperer tout les élément
 function getAll()
 {
     $db = connectDB();
@@ -10,6 +11,7 @@ function getAll()
     return $request->fetchAll();
 }
 
+//Récuperer tout les élément d'un seul type de quiz
 function getTypeQuiz($typequiz)
 {
     $db = connectDB();
@@ -19,6 +21,7 @@ function getTypeQuiz($typequiz)
     return $request->fetchAll();
 }
 
+//Récuperer la bonne réponse
 function getElement($marque)
 {
     $db = connectDB();
@@ -27,3 +30,11 @@ function getElement($marque)
     $request->execute(array($marque));
     return $request->fetchAll();
 }
+
+
+//    for ($i = 0; $i < 6-1; $i++)
+//    {
+//        $random = rand(0, count($element) - 1);
+//        echo $element[$random]["Image"];
+//        echo " / ";
+//    }

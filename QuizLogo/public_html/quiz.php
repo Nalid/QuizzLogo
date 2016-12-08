@@ -30,11 +30,13 @@ require_once 'dbconnection.php';
             </header>
             <section>
                 <div>
-                    <button class="button">TOUTES les marques</button>
-                    <button class="button">Les marques de SPORT</button>
-                    <button class="button">Les marques de MODE</button>
-                    <button class="button">Les marques de VOITURES</button>
-                    <button class="button">Les marques de NOURRITURE</button>
+                    <form action="quizGame.php" method="get">
+                        <button class="button" name="Tout" value="Tout">TOUTES les marques</button>
+                        <button class="button" name="Sport" value="Sport">Les marques de SPORT</button>
+                        <button class="button" name="Mode" value="Mode">Les marques de MODE</button>
+                        <button class="button" name="Voiture" value="voiture">Les marques de VOITURES</button>
+                        <button class="button" name="Nourriture" value="Nourriture">Les marques de NOURRITURE</button>
+                    </form>
                 </div>
             </section>
             <footer>
