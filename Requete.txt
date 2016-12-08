@@ -5,11 +5,19 @@ Requete :
 
 	Electronique:
 		SELECT NomMarques, Image FROM marques NATURAL JOIN appartenir NATURAL JOIN typequiz WHERE typequiz.NomTypeQuiz = "Electronique";
+
 	Mode:
 		SELECT NomMarques, Image FROM marques NATURAL JOIN appartenir NATURAL JOIN typequiz WHERE typequiz.NomTypeQuiz = "Mode";
+
 	Nourriture:
 		SELECT NomMarques, Image FROM marques NATURAL JOIN appartenir NATURAL JOIN typequiz WHERE typequiz.NomTypeQuiz = "Nourriture";
+
 	Sport:
 		SELECT NomMarques, Image FROM marques NATURAL JOIN appartenir NATURAL JOIN typequiz WHERE typequiz.NomTypeQuiz = "Sport";
+
 	Voitures:
 		SELECT NomMarques, Image FROM marques NATURAL JOIN appartenir NATURAL JOIN typequiz WHERE typequiz.NomTypeQuiz = "Voitures";
+
+	
+	Pour avoir la bonne marque:
+		SELECT NomMarques, Image FROM marques WHERE NomMarques = "Airness";

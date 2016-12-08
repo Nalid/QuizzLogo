@@ -27,16 +27,3 @@ function getElement($marque)
     $request->execute(array($marque));
     return $request->fetchAll();
 }
-
-function arrayElement($marque)
-{
-    $element = getElement($marque);
-    $elementreturn = array();
-    for ($i = 0; $i < 6; $i++)
-    {
-        $random = rand(0, count($element) - 1);
-        $elementreturn[$i] = $element[$random];
-        unset($element[$random]);
-    }
-    return $elementreturn;
-}

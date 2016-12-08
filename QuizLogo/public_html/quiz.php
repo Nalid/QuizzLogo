@@ -36,23 +36,6 @@ require_once 'dbconnection.php';
                     <button class="button">Les marques de VOITURES</button>
                     <button class="button">Les marques de NOURRITURE</button>
                 </div>
-                
-                <?php
-                    $takeAll = getAll();
-                ?>
-                <table>
-                    <?php
-                        foreach ($reponse as $takeAll)
-                        {
-                            ?>
-                    <tr>
-                        <td><?php echo $reponse["NomMarques"]?></td>
-                    </tr>
-                    <?php
-                    }
-                    ?>
-                </table>
-                
             </section>
             <footer>
 

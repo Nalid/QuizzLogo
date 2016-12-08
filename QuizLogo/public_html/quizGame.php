@@ -30,7 +30,14 @@ require_once 'request.php';
             <section>
                 <article class="floating-box">
                     <?php
-                    $element = arrayElement("Mode");
+                    //En construction
+                    $element = getTypeQuiz("Mode");
+                    for ($i = 0; $i < 6-1; $i++)
+                    {
+                        $random = rand(0, count($element) - 1);
+                        echo $element[$random]["NomMarques"];
+                        echo " / ";
+                    }
                     ?>
                 </article>
                 <article class="floating-box">2</article>
