@@ -22,7 +22,6 @@
                         <li><a href="accueil.php">Accueil</a></li>
                         <li><a href="quiz.php"> Quiz </a></li>
                         <li><a class="active" href="contact.php">Contact</a></li>
-                        <li style="float:right"><a href="login.php">Login</a></li>
                     </ul>
                 </nav>
             </header>

@@ -50,17 +50,23 @@ else if (isset($_GET["Tout"]))
                         <li><a href="accueil.php">Accueil</a></li>
                         <li><a href="quiz.php">Quiz</a></li>
                         <li><a href="contact.php">Contact</a></li>
-                        <li style="float:right"><a href="login.php">Login</a></li>
                     </ul>
                 </nav>
             </header>
             <section>
-                <article class="floating-box"></article>
-                <article class="floating-box">2</article>
-                <article class="floating-box">3</article>
-                <article class="floating-box">4</article>
-                <article class="floating-box">5</article>
-                <article class="floating-box">6</article>
+                <?php
+                $element = getTypeQuiz("Mode");
+                for ($i = 0; $i < 5 ; $i++) {
+                    $random = rand(0, count($element) - 1);
+                    
+                    <article class="floating-box">
+                        <img src="Image/Mode/<?php echo $element[$random]["Image"]; ?>" width="200px" height="200px"/>
+                    </article>
+                    <article class="floating-box">
+                        <img src="Image/<?php echo $element[$random]["NomMarques"]; ?>" width="200px" height="200px"/>
+                    </article>
+                    
+                <?php } ?>
             </section>
             <footer>
 

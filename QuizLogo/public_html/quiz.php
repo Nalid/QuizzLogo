@@ -24,7 +24,6 @@ require_once 'dbconnection.php';
                         <li><a href="accueil.php">Accueil</a></li>
                         <li><a class="active" href="quiz.php">Quiz</a></li>
                         <li><a href="contact.php">Contact</a></li>
-                        <li style="float:right"><a href="login.php">Login</a></li>
                     </ul>
                 </nav>
             </header>
@@ -32,7 +31,7 @@ require_once 'dbconnection.php';
                 <div>
                     <form action="quizGame.php" method="get">
                         <button class="button" name="Tout" value="Tout">TOUTES les marques</button>
-                        <button class="button" name="Sport" value="Sport">Les marques de SPORT</button>
+                    <button class="button" name="Sport" value="Sport">Les marques de SPORT</button>
                         <button class="button" name="Mode" value="Mode">Les marques de MODE</button>
                         <button class="button" name="Voiture" value="voiture">Les marques de VOITURES</button>
                         <button class="button" name="Nourriture" value="Nourriture">Les marques de NOURRITURE</button>
