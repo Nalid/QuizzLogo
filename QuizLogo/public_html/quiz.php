@@ -6,6 +6,8 @@
  * Date         : 10.11.2016
  */
 
+session_start();
+
 require_once 'dbconnection.php';
 ?>
 <!DOCTYPE html>
@@ -14,7 +16,7 @@ require_once 'dbconnection.php';
         <title>Quiz</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/style1.css">
+        <link rel="stylesheet" type="text/css" href="css/style2.css">
     </head>
     <body>
         <div id="Master">
@@ -30,11 +32,11 @@ require_once 'dbconnection.php';
             <section>
                 <div>
                     <form action="quizGame.php" method="get">
-                        <button class="button" name="Tout" value="Tout">TOUTES les marques</button>
-                    <button class="button" name="Sport" value="Sport">Les marques de SPORT</button>
-                        <button class="button" name="Mode" value="Mode">Les marques de MODE</button>
-                        <button class="button" name="Voiture" value="voiture">Les marques de VOITURES</button>
-                        <button class="button" name="Nourriture" value="Nourriture">Les marques de NOURRITURE</button>
+                        <button class="buttons" name="Tout" value="Tout">TOUTES les marques</button>
+                    <button class="buttons" name="Sport" value="Sport">Les marques de SPORT</button>
+                        <button class="buttons" name="Mode" value="Mode">Les marques de MODE</button>
+                        <button class="buttons" name="Voiture" value="voiture">Les marques de VOITURES</button>
+                        <button class="buttons" name="Nourriture" value="Nourriture">Les marques de NOURRITURE</button>
                     </form>
                 </div>
             </section>

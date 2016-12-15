@@ -58,22 +58,10 @@ nav a:hover {
 .active {
     background-color: #4CAF50;
 }
-
-/**************************************************************************
-                                IMAGE QUIZ
-**************************************************************************/
-.floating-box {
-    display: inline-block;
-    width: 200px;
-    height: 200px;
-    margin: 10px;
-    border: 3px solid #73AD21;
-}
-
 /**************************************************************************
                                 QUIZ BUTTON
 **************************************************************************/
-.button {
+.buttons {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -92,9 +80,9 @@ nav a:hover {
   height: 75px;
 }
 
-.button:hover {background-color: #3e8e41}
+.buttons:hover {background-color: #3e8e41}
 
-.button:active {
+.buttons:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
@@ -152,46 +140,12 @@ textarea {
 }
 
 /**************************************************************************
-                                LOGIN FORM
+                                IMAGE QUIZ
 **************************************************************************/
-
-form {
-    border-radius: 5px;
-    background-color: #f1f1f1;
-    padding: 20px;
-}
-
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+.floating-box {
     display: inline-block;
-    border: 1px solid #3e8e41;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-
-.container {
-    padding: 16px;
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
+    width: 216px;
+    height: 209px;
+    margin: 10px;
+    border: 3px solid #73AD21;
 }
