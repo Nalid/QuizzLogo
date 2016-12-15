@@ -37,6 +37,7 @@ require_once 'dbconnection.php';
                         <button class="buttons" name="Mode" value="Mode">Les marques de MODE</button>
                         <button class="buttons" name="Voiture" value="voiture">Les marques de VOITURES</button>
                         <button class="buttons" name="Nourriture" value="Nourriture">Les marques de NOURRITURE</button>
+                        <button class="buttons" name="Electronique" value="Electronique">Les marques d'ELECTRONIQUE</button>
                     </form>
                 </div>
             </section>

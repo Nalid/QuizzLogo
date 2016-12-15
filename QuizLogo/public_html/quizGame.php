@@ -38,6 +38,11 @@ else if(isset($_GET["Nourriture"]))
     $element = getTypeQuiz("Nourriture");
     $type = "Nourriture";
 }
+else if(isset($_GET["Electronique"]))
+{
+    $element = getTypeQuiz("Electronique");
+    $type = "Electronique";
+}
 else if (isset($_GET["Tout"]))
 {
     $element = getAll();

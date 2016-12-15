@@ -5,6 +5,8 @@
  * Description  :
  * Date         : 10.11.2016
  */
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,10 +28,10 @@
                 </nav>
             </header>
             <section id="contact-form">
-                <form action="">
+                <form method="POST" action="updateImage.php">
                     <label for="fname"><b>Prénom</b></label>
                     <input type="text" id="fname" name="firstname" placeholder="Entrez votre nom">
-
+          
                     <label for="lname"><b>Nom</b></label>
                     <input type="text" id="lname" name="lastname" placeholder="Entrez votre prénom">
 
@@ -71,8 +73,23 @@
                     <label for="mail"><b>Mail</b></label>
                     <input type="text" id="mail" name="mail" placeholder="Entrez votre adresse mail">
                     
-                    <label for="mail"><b>Image</b></label><br>
+                    <label for="mail"><b>Image à ajouté</b></label><br>
+                    <label for="mail">Choisissez la catégorie de l'image:</label><br>
+                    <input type='radio' name='cat' value="Sport">Sport
+                    <input type='radio' name='cat' value="Mode">Mode
+                    <input type='radio' name='cat' value="Electronique">Electronique
+                    <input type='radio' name='cat' value="Voiture">Voiture
+                    <input type='radio' name='cat' value="Nourriture">Nourriture<br>
+                    <input type="text" name="recievedName" placeholder="Rentrez le nom correct de la marque..">
                     <input type="file" name="addedFile"><br>
+                    <br>
+                    <label for="mail"><b>Image à supprimé</b></label><br>
+                    <label for="mail">Choisissez la catégorie de l'image:</label><br>
+                    <button name="Sport" value="Sport">Sport</button>
+                    <button name="Mode" value="Mode">Mode</button>
+                    <button name="Electronique" value="Electronique">Electronique</button>
+                    <button name="Voiture" value="Voiture">Voiture</button>
+                    <button name="Nourriture" value="Nourriture">Nourriture</button>
                     
                     <textarea placeholder="Écrivez votre message ici.."></textarea>
 
