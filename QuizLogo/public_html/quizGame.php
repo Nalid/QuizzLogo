@@ -8,50 +8,67 @@
 
 session_start();
 
-if(isset($_SESSION["Reponse"]))
-{
-    //$_POST[""] = ;
-}
-
 require_once 'request.php';
 
 $type;
 
-if(isset($_GET["Sport"]))
+if (isset($_GET["Type"]))
 {
-    $type = "Sport";
-    $element = getTypeQuiz("Sport");
+    switch ($_GET["Type"])
+    {
+        case "Sport":
+            $_SESSION["type"] = "Sport";
+            $_SESSION["element"] = getTypeQuiz("Sport");
+            break;
     
-} 
-else if (isset($_GET["Mode"]))
-{
-    $element = getTypeQuiz("Mode");
-    $type = "Mode";
-}
-else if (isset($_GET["Voiture"]))
-{
-    $element = getTypeQuiz("Voitures");
-    $type = "Voitures";
-}
-else if(isset($_GET["Nourriture"]))
-{
-    $element = getTypeQuiz("Nourriture");
-    $type = "Nourriture";
-}
+        case "Mode":
+            $_SESSION["type"] = "Mode";
+            $_SESSION["element"] = getTypeQuiz("Mode");
+            break;
+    
+        case "Voiture":
+            $_SESSION["type"] = "Voiture";
+            $_SESSION["element"] = getTypeQuiz("Voitures");
+            break;
+    
+        case "Nourriture":
+            $_SESSION["type"] = "Nourriture";
+            $_SESSION["element"] = getTypeQuiz("Nourriture");
+            break;
+    
+        case "Electronique":
+            $_SESSION["type"] = "Electronique";
+            $_SESSION["element"] = getTypeQuiz("Electronique");
+            break;
+    
+        case "Tout":
+            $_SESSION["element"] = getAll();
+            break;
+    }
 else if(isset($_GET["Electronique"]))
 {
     $element = getTypeQuiz("Electronique");
     $type = "Electronique";
 }
-else if (isset($_GET["Tout"]))
-{
-    $element = getAll();
 }
+
+$element = $_SESSION["element"];
+$type = $_SESSION["type"];
 
 $random1 = rand(0, count($element) - 1);
 $nomReponse = $element[$random1]['NomMarques'];
 
 $_SESSION["Reponse"] = $nomReponse;
+
+if(isset($_GET["1"]))
+{
+    $_SESSION["point"] += 2;
+}
+else if (isset($_GET["0"]))
+{
+    $_SESSION["point"] -= 1;
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -73,27 +90,49 @@ $_SESSION["Reponse"] = $nomReponse;
                 </nav>
             </header>
             <section>
-                <h1>Trouvez le logo de: <?php echo $nomReponse; ?></h1>
                 <?php
-                for ($i = 0; $i < 5 ; $i++) {
-                    $random = rand(0, count($element) - 1);
+                if ($_SESSION["point"] < 0 || $_SESSION["point"] >= 10)
+                {
+                    if ($_SESSION["point"] >= 10)
+                    {
+                        ?>
+                        <h1>Victoire</h1>
+                        <?php
+                    }
+                    else
+                    {
+                        ?>
+                        <h1>Game Over</h1>
+                        <?php
+                    }
+                }
+                else
+                {
+                ?>
+                <h1>Trouvez le logo de: <?php echo $nomReponse; ?></h1>
+                <h1><?php echo $_SESSION["point"];?></h1>
+                <form action="#" method="get">
+                    <?php
+                    for ($i = 0; $i < 5 ; $i++) {
+                        $random = rand(0, count($element) - 1);
                     ?>
                     <article class="floating-box">
-                        <form action="#" method="get">
-                            <button name="<?php echo $element[$random]['NomMarques']; ?>">
-                                <img src="Image/<?php echo $type; ?>/<?php echo $element[$random]["Image"]; ?>" width="200px" height="200px"/>
-                            </button>
-                            <!--<input type="hidden" name="nomImage" value="<?php echo  $element[$random]["NomMarques"] ?>" />-->
-                        </form>
+                        
+                        <button name="0" value="<?php echo $element[$random]['NomMarques']; ?>">
+                            <img src="Image/<?php echo $type; ?>/<?php echo $element[$random]["Image"]; ?>" width="200px" height="200px"/>
+                        </button>
+                        <!--<input type="hidden" name="nomImage" value="<?php echo  $element[$random]["NomMarques"] ?>" />-->
                     </article>   
-                <?php } ?>
-                <article class="floating-box">
-                    <form action="quizGame.php" method="post">
-                        <button name="<?php echo $element[$random1]['NomMarques']; ?>">
+                    <?php } ?>
+                    <article class="floating-box">
+                        <button name="1" value="<?php echo $element[$random1]['NomMarques']; ?>">
                             <img src="Image/<?php echo $type; ?>/<?php echo $element[$random1]['Image']; ?>" width="200px" height="200px"/>
                         </button>    
-                    </form>
-                </article>
+                    </article>
+                </form>
+                <?php
+                }
+                ?>
             </section>
             <footer>
 

@@ -8,6 +8,8 @@
 
 session_start();
 
+$_SESSION["point"] = 0;
+
 require_once 'dbconnection.php';
 ?>
 <!DOCTYPE html>
@@ -32,11 +34,11 @@ require_once 'dbconnection.php';
             <section>
                 <div>
                     <form action="quizGame.php" method="get">
-                        <button class="buttons" name="Tout" value="Tout">TOUTES les marques</button>
-                    <button class="buttons" name="Sport" value="Sport">Les marques de SPORT</button>
-                        <button class="buttons" name="Mode" value="Mode">Les marques de MODE</button>
-                        <button class="buttons" name="Voiture" value="voiture">Les marques de VOITURES</button>
-                        <button class="buttons" name="Nourriture" value="Nourriture">Les marques de NOURRITURE</button>
+                        <button class="buttons" name="Type" value="Tout">TOUTES les marques</button>
+                        <button class="buttons" name="Type" value="Sport">Les marques de SPORT</button>
+                        <button class="buttons" name="Type" value="Mode">Les marques de MODE</button>
+                        <button class="buttons" name="Type" value="Voiture">Les marques de VOITURES</button>
+                        <button class="buttons" name="Type" value="Nourriture">Les marques de NOURRITURE</button>
                         <button class="buttons" name="Electronique" value="Electronique">Les marques d'ELECTRONIQUE</button>
                     </form>
                 </div>
