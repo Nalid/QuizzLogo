@@ -27,7 +27,7 @@ if (isset($_GET["Type"]))
             break;
     
         case "Voiture":
-            $_SESSION["type"] = "Voiture";
+            $_SESSION["type"] = "Voitures";
             $_SESSION["element"] = getTypeQuiz("Voitures");
             break;
     
@@ -45,11 +45,6 @@ if (isset($_GET["Type"]))
             $_SESSION["element"] = getAll();
             break;
     }
-else if(isset($_GET["Electronique"]))
-{
-    $element = getTypeQuiz("Electronique");
-    $type = "Electronique";
-}
 }
 
 $element = $_SESSION["element"];
