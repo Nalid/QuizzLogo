@@ -32,8 +32,8 @@ if (isset($_GET["Type"]))
             break;
     
         case "Nourriture":
-            $_SESSION["type"] = "Nourriture";
-            $_SESSION["element"] = getTypeQuiz("Nourriture");
+            $_SESSION["type"] = "Nourritures";
+            $_SESSION["element"] = getTypeQuiz("Nourritures");
             break;
     
         case "Electronique":
