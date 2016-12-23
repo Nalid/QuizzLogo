@@ -6,16 +6,17 @@
  * Date         : 15.12.2016
  */
 
-$selectedRadio=$_POST['cat'];
-$recievedName=$_POST['recievedName'];
+$selectedRadio = $_POST['cat'];
+$recievedName = $_POST['recievedName'];
+$file = $_FILES['addedFile'];
 
 require_once './request.php';
 
 if (isset($_FILES) && is_array($_FILES)) {
-insertImage($_FILES['addedFile'], $selectedRadio, $recievedName);
+insertImage($file, $selectedRadio, $recievedName);
 }
+header('location:../accueil.php');
 
-header('location:accueil.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,7 +31,7 @@ header('location:accueil.php');
             <header>
                 <nav>
                     <ul>
-                        <li><a class="active" href="accueil.php">Accueil</a></li>
+                        <li><a class="active" href="../accueil.php">Accueil</a></li>
                         <li><a href="quiz.php">Quiz</a></li>
                         <li><a href="contact.php">Contact</a></li>
                     </ul>

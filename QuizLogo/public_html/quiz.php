@@ -10,7 +10,7 @@ session_start();
 
 $_SESSION["point"] = 0;
 
-require_once 'dbconnection.php';
+require_once './Fonction/dbconnection.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,7 +39,7 @@ require_once 'dbconnection.php';
                         <button class="buttons" name="Type" value="Mode">Les marques de MODE</button>
                         <button class="buttons" name="Type" value="Voiture">Les marques de VOITURES</button>
                         <button class="buttons" name="Type" value="Nourriture">Les marques de NOURRITURE</button>
-                        <button class="buttons" name="Electronique" value="Electronique">Les marques d'ELECTRONIQUE</button>
+                        <button class="buttons" name="Type" value="Electronique">Les marques d'ELECTRONIQUE</button>
                     </form>
                 </div>
             </section>

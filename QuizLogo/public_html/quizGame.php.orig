@@ -8,7 +8,7 @@
 
 session_start();
 
-require_once 'Fonction/request.php';
+require_once 'request.php';
 
 $type;
 
@@ -21,13 +21,39 @@ if (isset($_GET["Type"]))
             $_SESSION["element"] = getTypeQuiz("Sport");
             break;
     
+<<<<<<< HEAD
+} 
+else if (isset($_GET["Mode"]))
+{
+    $element = getTypeQuiz("Mode");
+    $type = "Mode";
+}
+else if (isset($_GET["Voiture"]))
+{
+    $element = getTypeQuiz("Voitures");
+    $type = "Voitures";
+}
+else if(isset($_GET["Nourriture"]))
+{
+    $element = getTypeQuiz("Nourriture");
+    $type = "Nourriture";
+}
+else if(isset($_GET["Electronique"]))
+{
+    $element = getTypeQuiz("Electronique");
+    $type = "Electronique";
+}
+else if (isset($_GET["Tout"]))
+{
+    $element = getAll();
+=======
         case "Mode":
             $_SESSION["type"] = "Mode";
             $_SESSION["element"] = getTypeQuiz("Mode");
             break;
     
         case "Voiture":
-            $_SESSION["type"] = "Voitures";
+            $_SESSION["type"] = "Voiture";
             $_SESSION["element"] = getTypeQuiz("Voitures");
             break;
     
@@ -45,6 +71,7 @@ if (isset($_GET["Type"]))
             $_SESSION["element"] = getAll();
             break;
     }
+>>>>>>> Systeme de jeu
 }
 
 $element = $_SESSION["element"];
@@ -86,9 +113,9 @@ else if (isset($_GET["0"]))
             </header>
             <section>
                 <?php
-                if ($_SESSION["point"] < 0 || $_SESSION["point"] >= 50)
+                if ($_SESSION["point"] < 0 || $_SESSION["point"] >= 10)
                 {
-                    if ($_SESSION["point"] >= 50)
+                    if ($_SESSION["point"] >= 10)
                     {
                         ?>
                         <h1>Victoire</h1>

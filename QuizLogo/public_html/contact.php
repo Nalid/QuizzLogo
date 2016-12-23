@@ -6,7 +6,7 @@
  * Date         : 10.11.2016
  */
 
-
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,51 +28,7 @@
                 </nav>
             </header>
             <section id="contact-form">
-                <form method="POST" action="updateImage.php">
-                    <label for="fname"><b>Prénom</b></label>
-                    <input type="text" id="fname" name="firstname" placeholder="Entrez votre nom">
-          
-                    <label for="lname"><b>Nom</b></label>
-                    <input type="text" id="lname" name="lastname" placeholder="Entrez votre prénom">
-
-                    <input type="radio" name="gender" value="male" checked> Male
-                    <input type="radio" name="gender" value="female"> Female<br>
-                    
-                    <label for="country"><b>Pays</b></label>
-                    <select id="country" name="country">
-                        <option value="Albanie">Albanie</option>
-                        <option value="Allemagne">Allemagne</option>
-                        <option value="Australie">Australie</option>
-                        <option value="Autriche">Autriche</option>
-                        <option value="Belgique">Belgique</option>
-                        <option value="Bosnie">Bosnie</option>
-                        <option value="Bulgarie">Bulgarie</option>    
-                        <option value="canada">Canada</option>
-                        <option value="Croatie">Croatie</option>
-                        <option value="EUA">Danemark</option>
-                        <option value="Espagne">Espagne</option>
-                        <option value="Estonie">Estonie</option>
-                        <option value="EUA">EUA</option>
-                        <option value="France">France</option>
-                        <option value="Grèce">Grèce</option>
-                        <option value="Hongrie">Hongrie</option>
-                        <option value="Island">Island</option>
-                        <option value="Italie">Italie</option>
-                        <option value="Lettonie">Lettonie</option>
-                        <option value="Lituanie">Lituanie</option>
-                        <option value="Macédonie">Macédonie</option>
-                        <option value="Monténégro">Monténégro</option>
-                        <option value="Norvège">Norvège</option>
-                        <option value="Pays-Bas">Pays-Bas</option>
-                        <option value="Portugal">Portugal</option>
-                        <option value="Royaume-Uni">Royaume-Uni</option>
-                        <option value="Suisse">Suisse</option>
-                        <option value="Turquie">Turquie</option>
-                    </select>
-
-                    <label for="mail"><b>Mail</b></label>
-                    <input type="text" id="mail" name="mail" placeholder="Entrez votre adresse mail">
-                    
+                <form method="POST" action="./Fonction/updateImage.php" enctype="multipart/form-data">
                     <label for="mail"><b>Image à ajouté</b></label><br>
                     <label for="mail">Choisissez la catégorie de l'image:</label><br>
                     <input type='radio' name='cat' value="Sport">Sport
@@ -82,18 +38,18 @@
                     <input type='radio' name='cat' value="Nourriture">Nourriture<br>
                     <input type="text" name="recievedName" placeholder="Rentrez le nom correct de la marque..">
                     <input type="file" name="addedFile"><br>
+                    <input type="submit" value="Submit">
+                </form>
+                
+                <form action="./Fonction/deleteImage.php" method="get" enctype="multipart/form-data">
                     <br>
                     <label for="mail"><b>Image à supprimé</b></label><br>
                     <label for="mail">Choisissez la catégorie de l'image:</label><br>
-                    <button name="Sport" value="Sport">Sport</button>
-                    <button name="Mode" value="Mode">Mode</button>
-                    <button name="Electronique" value="Electronique">Electronique</button>
-                    <button name="Voiture" value="Voiture">Voiture</button>
-                    <button name="Nourriture" value="Nourriture">Nourriture</button>
-                    
-                    <textarea placeholder="Écrivez votre message ici.."></textarea>
-
-                    <input type="submit" value="Submit">
+                    <button name="TypeDel" value="Sport">Sport</button>
+                    <button name="TypeDel" value="Mode">Mode</button>
+                    <button name="TypeDel" value="Electronique">Electronique</button>
+                    <button name="TypeDel" value="Voitures">Voiture</button>
+                    <button name="TypeDel" value="Nourriture">Nourriture</button>
                 </form>
             </section>
             <footer>

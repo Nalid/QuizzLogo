@@ -10,7 +10,7 @@ session_start();
 
 $_SESSION["point"] = 0;
 
-require_once 'dbconnection.php';
+require_once './Fonction/dbconnection.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,7 +25,7 @@ require_once 'dbconnection.php';
             <header>
                 <nav>
                     <ul>
-                        <li><a href="accueil.php">Accueil</a></li>
+                        <li><a href="../accueil.php">Accueil</a></li>
                         <li><a class="active" href="quiz.php">Quiz</a></li>
                         <li><a href="contact.php">Contact</a></li>
                     </ul>
